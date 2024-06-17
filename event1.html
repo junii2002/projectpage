@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<title>Fragrance</title> 
+</head>
+<style>
+*{
+	box-sizing: border-box;
+}
+body {
+		margin: 0;
+		font-family: Arial, sans-serif;
+		background-color: #f8f9fa;
+}
+.header{
+	background-color: #917b71;
+	padding: 55px;
+	text-align: center;
+}
+.header h1 {
+			font-family: inherit; 
+			font-weight: bold;
+			margin: 0; 
+            color:#dbdbdb;
+            font-size:50px;
+		}
+.header p{
+	font-size: 20px;
+}
+.topnav {
+	background-color: #987058;
+	text-align: center;
+}
+.dropdown{
+	background-color: #987058;
+	text-align: center;
+}
+.dropdown a{
+	display: inline-block;
+	color: #f2f2f2;
+	text-align: center;
+	padding: 14px 16px;
+	text-decoration: none;
+}
+.dropdown a:hover{
+	background-color: #896e5a;
+	color: black;
+}
+.column{
+	float: left;
+	padding: 10px;
+}
+.column.side{
+	width: 20%;
+}
+.column.middle{
+	width: 60%;
+}
+
+.row::after{
+	content: "";
+	display: table;
+	clear: both;
+}
+@media screen and (max-width: 600px){
+	.column.side, .column.middle, .topnav, .row{
+		width: 100%;
+	}
+}
+.footer{
+	background-color: #ddd;
+	padding: 10px;
+	text-align: center;
+}
+.uni,.shop {
+	border: 1px dashed #7e4728;
+	text-align: center;
+	margin: 10px 10px;
+	padding: 10px;
+	background-color:#a0755b;
+	color: rgb(205, 188, 188);
+}
+
+.uni h1,.shop h1 {
+	font-size: 20px;
+	font-weight: bold;
+	text-decoration: underline;
+	color: #000;
+}
+.uni h2{
+	font-size: 18px;
+	font-style: italic;
+}
+.uni p, .shop p {
+	font-size: 17px;
+	text-decoration: underline;
+}
+.uni img, .shop img {
+	width: 100%;
+	height: auto;
+}
+.uni{
+	border: 1px dashed #7e4728;
+	text-align: center;
+	margin: 10px 10px;
+}
+.uni h1{
+	font-size: 20px;
+	font-weight: bold;
+	text-decoration: underline;
+}
+.uni h2{
+	font-size: 18px;
+	font-style: italic;
+}
+.uni p{
+	font-size: 17px;
+	text-decoration: underline;
+	color: rgb(205, 188, 188);
+}
+#uni{
+	display: grid;
+	background-color: #a0755b;
+	grid-template-rows: 1fr 1fr;
+}
+.shop{
+	border: 1px dashed #7e4728;
+	text-align: center;
+	margin: 10px 10px;
+}
+.shop h1{
+	font-size: 20px;
+	font-weight: bold;
+    text-decoration: underline;
+}
+.shop p{
+	color: rgb(205, 188, 188);
+	text-decoration: underline;
+}
+#shop{
+    display: grid;
+    background-color: #a0755b;
+}
+.card{
+	border: 1px dashed #7e4728;
+	padding: 15px;
+	margin: 5px;
+}
+#login{
+	font-size: 20px;
+	padding: 30px;
+	border: 1px dashed #7e4728;
+	text-align: left;
+}
+.dropbtn{
+	background-color: #987058;
+	color: white;
+	padding: 16px;
+	font-size: 16px;
+	border: none;
+	cursor: pointer;
+	overflow: hidden;
+	text-align: center;
+	display: inline-block;
+	color: #e0dede;
+	text-align: center;
+	padding: 14px 16px;
+	text-decoration: none;
+}
+.dropdown{
+	position: relative;
+	display: inline-block;
+}
+.dropdown-content{
+	display: none;
+	position: absolute;
+	top: 100%;
+	left: 0;
+	background-color: #cecece;
+	min-width: 160px;
+	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+	z-index: 1;
+}
+.dropdown-content a{
+	color:black;
+	padding:12px 16px;
+	text-decoration:none;
+	display:block;
+	
+}
+.dropdown:hover .dropdown-content{
+	display: block;
+}
+.dropdown-content a:hover{
+	background-color: #f1f1f1;
+}
+.dropdown:hover .dropbtn{
+	background-color: #a0755b;
+}
+.dropdown-submenu {
+	position: relative;
+}
+.dropdown-submenu .dropdown-content {
+	left: 100%;
+	top: 0;
+	display: none; 
+}
+.dropdown-submenu:hover .dropdown-content {
+	display: block; 
+}
+
+.card h1{
+	font-weight: bold;
+	text-decoration: underline;
+	font-size: 25px;
+}
+.card h2{
+	font-style: italic;
+	font-size: 20px;
+}
+.card p{
+	font-size: 17px;
+}
+.card ol{
+	font-size: 17px;
+	font-weight: bold;
+}
+.footer a{
+	text-decoration: none;
+	word-spacing: 3rem;
+}
+.footer a:link{
+	color: black;
+	font-weight: bold;
+}
+.footer a:visited{
+	color: black;
+	font-weight: bold;
+}
+.footer a:hover{
+	color: purple;
+	font-weight: bold;
+}
+.fragrance-row {
+	display: flex;
+	justify-content: space-around;
+	text-align: center;
+	margin: 20px 0;
+}
+.fragrance-item {
+	width: 30%;
+	padding: 10px;
+}
+.fragrance-item figure {
+	margin: 0;
+	padding: 0;
+}
+.fragrance-item img {
+	width: 100%;
+	height: auto;
+}
+.fragrance-item p {
+	margin: 5px 0;
+	font-size: 16px;
+}
+.event-section {
+	background-color: #f9f9f9;
+	padding: 20px;
+	border-radius: 10px;
+	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+.event-section h2 {
+	font-size: 22px;
+	font-weight: bold;
+	margin-bottom: 10px;
+}
+.event-section .event-item {
+	margin-bottom: 20px;
+}
+.event-section .event-item h3 {
+	font-size: 20px;
+	font-weight: bold;
+	margin-bottom: 5px;
+}
+.event-section .event-item p {
+	font-size: 16px;
+}
+.event-section h2{
+    font-size: 25px;
+	font-weight: bold;
+	text-decoration: underline;
+}
+</style>
+<body>
+	<div class="header">
+		<h1>Fragrance</h1>
+	</div>
+
+	<div class="topnav">
+		<div class="dropdown">
+			<button class="dropbtn">향수</button>
+			<div class="dropdown-content">
+				<a href="floral.html">플로럴</a>
+				<a href="Woody.html">우디</a>
+			</div>
+		</div>
+
+		<div class="dropdown">
+			<button class="dropbtn">히스토리</button>
+			<div class="dropdown-content">
+				<a href="brand1.html">브랜드소개</a>
+				<a href="brand2.html">NOTE</a>
+			</div>
+		</div>
+
+		<div class="dropdown">
+			<button class="dropbtn">고객 지원</button>
+			<div class="dropdown-content">
+				<a href="info.html">공지사항</a>
+			</div>
+		</div>
+
+        <div class="dropdown">
+            <button class="dropbtn">이벤트</button>
+            <div class="dropdown-content">
+                <div class="dropdown-submenu">
+                    <a href="event1.html">이벤트</a>
+                    <div class="dropdown-content">
+                        <a href="#">시향지무료배송</a>
+                        <a href="#">20%할인</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+
+        <div class="dropdown">
+            <button class="dropbtn">로그인</button>
+            <div class="dropdown-content">
+                <a href="login.html">로그인</a>
+				<a href="signup.html">회원가입</a>
+            </div>
+        </div>
+	</div>
+
+	<div class="row">
+		<div class="column side">
+			<aside id="login">
+				<form onsubmit="return false;">
+					<label for="user">아이디</label><br>
+					<input type="text" id="user" size="15"><br>
+					<label for="pass">비밀번호</label><br>
+					<input type="password" id="pass" size="15"><br>
+					<input type="submit" value="로그인" onclick="showAlert()">
+					<input type="button" value="회원가입" onclick="redirectToSignup()">
+				</form>
+                
+				<script>
+					function showAlert(){
+						var user = document.getElementById('user').value;
+						alert(user + "님 환영합니다!");
+					}
+
+					function redirectToSignup(){
+						window.location.href = 'signup.html';
+					}
+				</script>
+			</aside>
+		</div>
+	
+		<div class="column middle">
+			<section id="post">
+				<article>
+					<div class="event-section">
+						<h2>Event</h2><br><br>
+						<div class="event-item">
+							<h3>Event1 : 시향지 무료배송</h3>
+                            <p>다양한 향을 시도해보고, 자신의 색을 찾아가고 싶은 고객님들을 위해, 2024년 1년 간 원하는 시향지를 무료로 배송해드리는 이벤트를 하고 있습니다. <br>최대 10개의 향을 무료로 받아보실 수 있습니다.<br>여러분들의 많은 참여 부탁드립니다. </p><br><br>
+						</div>
+                        <div class="event-item">
+							<h3>Event2 : 2개 구매 시 20% 할인</h3>
+                            <p>여러분의 많은 성원에 저희 브랜드가 보답하기 위해 오프라인 매장에서 향수 2개 구매 시, 20% 할인된 가격에 향수를 만날 수 있는 이벤트를 시행하게 되었습니다.<br> 항상 저희 브랜드를 사랑해주시는 여러분들에게 감사하며, 많은 참여 부탁드립니다.  </p>
+						</div>
+					</div>
+				</article>
+			</section>
+		</div>
+		
+		<div class="column side">
+			<div class="uni">
+				<article id="uni">
+					<h1>Perfume</h1>
+					<h2>향수 구매하기</h2>
+					<p><img src="floral1.png" width="170" height="200"></p>
+					<p>현재 이벤트 진행중 !<br>파격할인</p>
+				</article>
+			</div>
+			<div class="shop">
+				<article id="shop">
+					<h1>시향지이벤트</h1>
+					<p><img src="parfum.png" width="170" height="100"></p>
+					<p>시향지 무료배송 이벤트 진행중 !</p>
+				</article>
+			</div>
+		</div>
+	</div>    
+	
+<div class="footer">
+	<footer>
+		<nav id="foot">
+			<ul>
+				<a href="shopping.html">장바구니</a>
+				<a href="qanda.html">&nbsp;1:1문의</a>
+				<a href="howtocome.html">&nbsp;오시는길 </a>
+			</ul>
+		</nav>	
+	</footer>
+</div>
+</body>
+</html>

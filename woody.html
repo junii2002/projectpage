@@ -2,10 +2,10 @@
 <html lang="ko">
 <head>
 	<meta charset="utf-8">
-	<title>Fragrance</title> 
+	<title>HTML + CSS 실습 5</title> 
 </head>
-<style>
-*{
+	<style>
+   *{
 	box-sizing:border-box;
 }
 body {
@@ -13,7 +13,6 @@ body {
 			font-family: Arial, sans-serif;
 			background-color: #f8f9fa;
 		}
-
 	.header {
 			background-color: #917b71;
 			padding: 55px;
@@ -48,18 +47,6 @@ body {
 			background-color: #896e5a;
 			color: black;
 		}
-		.dropdown-submenu {
-	position: relative;
-}
-		.dropdown-submenu .dropdown-content {
-	left: 100%;
-	top: 0;
-	display: none; /* Initially hidden */
-}
-		.dropdown-submenu:hover .dropdown-content {
-	display: block; /* Show on hover */
-}
-
 		.column {
 			float: left;
 			padding: 10px;
@@ -85,7 +72,7 @@ body {
 			padding: 10px;
 			text-align: center;
 		}
-		.uni, .shop {
+		.uni, .offline, .shop {
 	border: 1px dashed #7e4728;
 	text-align: center;
 	margin: 10px 10px;
@@ -93,7 +80,7 @@ body {
 	background-color:#a0755b;
 	color: rgb(205, 188, 188);
 }
-.uni h1, .shop h1 {
+.uni h1,.shop h1 {
 	font-size: 20px;
 	font-weight: bold;
 	text-decoration: underline;
@@ -200,7 +187,6 @@ body {
 	padding:12px 16px;
 	text-decoration:none;
 	display:block;
-	
 }
 .dropdown:hover .dropdown-content{
 	display:block;
@@ -210,6 +196,19 @@ body {
 .dropdown:hover .dropbtn{
 	background-color:#a0755b;
 }
+
+.dropdown-submenu {
+	position: relative;
+}
+.dropdown-submenu .dropdown-content {
+	left: 100%;
+	top: 0;
+	display: none; /* Initially hidden */
+}
+.dropdown-submenu:hover .dropdown-content {
+	display: block; /* Show on hover */
+}
+
 .card h1{
 	font-weight:bold;
 	text-decoration:underline;
@@ -280,7 +279,7 @@ body {
             <button class="dropbtn">향수</button>
             <div class="dropdown-content">
                 <a href="floral.html">플로럴</a>
-                <a href="Woody.html">우디</a>
+                <a href="woody.html">우디</a>
             </div>
         </div>
 
@@ -313,7 +312,7 @@ body {
 		</div>
 		
 
-		<div class="dropdown">
+        <div class="dropdown">
             <button class="dropbtn">로그인</button>
             <div class="dropdown-content">
                 <a href="login.html">로그인</a>
@@ -354,34 +353,35 @@ body {
 				<article>
 					<div class="card">
 						<header>
-							<h1>Floral</h1>
+							<h1>Woody</h1>
 						</header>
 						<div class="fragrance-row">
 							<div class="fragrance-item">
 								<figure>
-									<img src="floral1.png" width="150" height="150" alt="향수 이미지1">
+									<img src="woody1.png" width="150" height="150" alt="향수 이미지1">
 								</figure>
-								<h2>세인트모리츠</h2>
+								<h2>히페리온</h2>
 								<h4>가격 : 58000원<br><br></h4>
-								<p>향긋한 플로럴 노트와 부드럽고 포근한 머스크와 바닐라 향이 추운 겨울 창문으로 드리우는 따스한 햇살처럼 포근한 향기</p>
+								<p>아침 공기처럼 맑고 청아한 향기에서<br>점점 짙어지는 우디향으로<br>상쾌하고 푸른 자연의 향기가<br>매력적인 향기</p>
 								
 							</div>
 							<div class="fragrance-item">
 								<figure>
-									<img src="floral2.png" width="150" height="150" alt="향수 이미지2">
+									<img src="woody2.png" width="150" height="150" alt="향수 이미지2">
 								</figure>
-								<h2>플로랄리아</h2>
+								<h2>상탈 세콰이아</h2>
 								<h4>가격 : 58000원<br><br></h4>
-								<p>싱그럽고 스파클링한 살구꽃 향을 시작으로 풍성한 꽃 향을 선사하며, 시간이 지날수록 산뜻한 머스크가 부드럽게 감싸주는 대중적이고 호불호 없는 향</p>
+								<p>진한 우디 향과 시간이 지날수록 잔잔하면서<br>깊이 올라오는 레더와 머스키함이<br>굉장히 유니크한 분위기를 자아내는 향기</p>
 								
 							</div>
 							<div class="fragrance-item">
 								<figure>
-									<img src="floral3.png" width="150" height="150" alt="향수 이미지3">
+									<img src="woody3.png" width="150" height="150" alt="향수 이미지3">
 								</figure>
-								<h2>베리 섹시</h2>
+								<h2>킹스맨</h2>
 								<h4>가격 : 58000원<br><br></h4>
-								<p>은은한 로즈향과 부드러운 크림 위에 상큼한 사과와 딸기향으로 섹시하면서 귀엽고 사랑스러움이 넘치는 향기</p>
+								<p>다소 무겁고 중후한 우디향으로 시작해<br>시간이 지날수록 실크처럼 부드러운 잔향이<br>시원하게 느껴지는 매력적인 향기</p>
+								
 							</div>
 						</div>
 					</div>
@@ -415,7 +415,7 @@ body {
 	<footer>
 		<nav id="foot">
 			<ul>
-				<a href="shopping.html">장바구니</a>
+                <a href="shopping.html">장바구니</a>
 
 				<a href="qanda.html">&nbsp;1:1문의</a>
 

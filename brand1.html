@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<title>Fragrance</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script> 
+</head>
+<style>
+*{
+	box-sizing:border-box;
+}
+body {
+	margin: 0;
+	font-family: Arial, sans-serif;
+	background-color: #f8f9fa;
+}
+
+.header {
+	background-color: #917b71;
+	padding: 55px;
+	text-align: center;
+}
+.header h1 {
+	font-family: inherit; 
+	font-weight: bold;
+	margin: 0; 
+    color:#dbdbdb;
+	font-size:50px;
+}
+.header p {
+	font-size: 20px;
+}
+.topnav {
+	background-color: #987058;
+	text-align: center;
+}
+.dropdown {
+	background-color: #987058;
+	text-align: center;
+}
+.dropdown a {
+	display: inline-block;
+	color: #f2f2f2;
+	text-align: center;
+	padding: 14px 16px;
+	text-decoration: none;
+}
+.dropdown a:hover {
+	background-color: #896e5a;
+	color: black;
+}
+.dropdown-submenu {
+	position: relative;
+}
+.dropdown-submenu .dropdown-content {
+	left: 100%;
+	top: 0;
+	display: none;
+}
+.dropdown-submenu:hover .dropdown-content {
+	display: block;
+}
+.column {
+	float: left;
+	padding: 10px;
+}
+.column.side {
+	width: 30%;
+}
+.column.middle {
+	width: 70%;
+}
+.row::after {
+	content: "";
+	display: table;
+	clear: both;
+}
+@media screen and (max-width: 600px) {
+	.column.side, .column.middle, .topnav, .row {
+		width: 100%;
+	}		
+}
+.footer {
+	background-color: #ddd;
+	padding: 10px;
+	text-align: center;
+}
+.card {
+	border: 1px dashed #7e4728;
+	padding: 15px;
+	margin: 5px;
+}
+.dropbtn{
+	background-color:#987058;
+	color:white;
+	padding:16px;
+	font-size:16px;
+	border:none;
+	cursor:pointer;
+	overflow:hidden;
+	text-align:center;
+	display:inline-block;
+	color:#e0dede;
+	text-align:center;
+	padding:14px 16px;
+	text-decoration:none;
+}
+.dropdown{
+	position:relative;
+	display:inline-block;
+}
+.dropdown-content{
+	display:none;
+	position:absolute;
+	top:100%;
+	left:0;
+	background-color:#cecece;
+	min-width:160px;
+	box-shadow:0px 8px 16px 0px rgba(0,0,0,0,2);
+	z-index:1;
+}
+.dropdown-content a{
+	color:black;
+	padding:12px 16px;
+	text-decoration:none;
+	display:block;
+	
+}
+.dropdown:hover .dropdown-content{
+	display:block;
+}
+.dropdown-content a:hover{background-color:#f1f1f1}
+
+.dropdown:hover .dropbtn{
+	background-color:#a0755b;
+}
+.card h1{
+	font-weight:bold;
+	text-decoration:underline;
+    font-style:italic;
+	font-size: 25px;
+}
+.card h2{
+	font-style:italic;
+	font-size:20px;
+}
+.card p{
+	font-size:17px;
+}
+.card ul{
+    font-size: 20px;
+}
+.footer a{
+	text-decoration:none;
+	word-spacing:3rem;
+}
+.footer a:link{
+	color:black;
+	font-weight:bold;
+}
+.footer a:visited{
+	color:black;
+	font-weight:bold;
+}
+.footer a:hover{
+	color:purple;
+	font-weight:bold;
+}
+</style>
+<body>
+	<div class="header">
+		<h1>Fragrance</h1>
+	</div>
+	
+	<div class="topnav">
+        <div class="dropdown">
+            <button class="dropbtn">향수</button>
+            <div class="dropdown-content">
+                <a href="floral.html">플로럴</a>
+                <a href="Woody.html">우디</a>
+            </div>
+        </div>
+
+        <div class="dropdown">
+            <button class="dropbtn">히스토리</button>
+            <div class="dropdown-content">
+                <a href="brand1.html">브랜드소개</a>
+                <a href="brand2.html">NOTE</a>
+            </div>
+        </div>
+
+        <div class="dropdown">
+            <button class="dropbtn">고객 지원</button>
+            <div class="dropdown-content">
+                <a href="info.html">공지사항</a>
+            </div>
+        </div>
+
+		<div class="dropdown">
+			<button class="dropbtn">이벤트</button>
+			<div class="dropdown-content">
+				<div class="dropdown-submenu">
+					<a href="event1.html">이벤트</a>
+					<div class="dropdown-content">
+						<a href="#">시향지무료배송</a>
+						<a href="#">20%할인</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+
+		<div class="dropdown">
+            <button class="dropbtn">로그인</button>
+            <div class="dropdown-content">
+                <a href="login.html">로그인</a>
+				<a href="signup.html">회원가입</a>
+            </div>
+        </div>
+    </div>	
+    
+	<div class="row">
+		<div class="column middle">
+			<section id="post">
+				<article>
+					<div class="card">
+						<header>
+							<h1><br>About Brand<br><br><br></h1>
+						</header>
+                        <img src="brand1.png" alt="브랜드소개" width="90%"><br><br>
+						<ul>
+							<li>있는 그대로의 '나'를 자연의 향기로 표현하고자 합니다.<br><br></li>
+							<li>온전한 '나'를 표현하는 향기로, 자신감을 가질 수 있도록,<br>힘든 하루에 편안한 향기가 위로가 되도록하기 위한 향을 만듭니다.<br><br></li>
+							<li>합리적인 가격과 감각적인 디자인, 세심한 조향으로 여러분들에게 만족감을 드리는 곳이 되겠습니다.<br><br></li>
+                            <li>소중한 추억을 향기로 선물하고, 기억의 한 조각을 남길 수 있도록 노력합니다. <br>당신의 소중한 향기를 '이곳'에서 찾으세요.<br><br></li>
+
+						</ul>
+					</div>
+                    
+				</article>
+			</section>
+		</div>
+		
+	
+		<div class="column side">
+            <div id="demo" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active"></button>
+                    <button type="button" data-bs-target="#demo" data-bs-slide-to="1"></button>
+                    <button type="button" data-bs-target="#demo" data-bs-slide-to="2"></button>
+                </div>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="woody1.png" alt="Woody" class="d-block" width="500px" height="670px">
+                        <div class="carousel-caption">
+                            <h3>Fragrance</h3>
+                            <p>자연과 인간의 아름다움을 표현하는 향을 연구합니다.</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="floral1.png" alt="Floral" class="d-block" width="500px" height="670px">
+                        <div class="carousel-caption">
+                            <h3>Fragrance</h3>
+                            <p>자연과 인간의 아름다움을 표현하는 향을 연구합니다.</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="woody2.png" alt="Woody2" class="d-block"width="500px" height="670px">
+                        <div class="carousel-caption">
+                            <h3>Fragrance</h3>
+                            <p>자연과 인간의 아름다움을 표현하는 향을 연구합니다.</p>
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon"></span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next">
+                    <span class="carousel-control-next-icon"></span>
+                </button>
+            </div>
+    
+        
+		</div>
+	</div>    
+	
+			
+	
+<div class="footer">
+	<footer>
+		<nav id="foot">
+			<ul>
+				<a href="shopping.html">장바구니</a>
+
+				<a href="qanda.html">&nbsp;1:1문의</a>
+
+                <a href="howtocome.html">&nbsp;오시는길 </a>
+			</ul>
+		</nav>	
+	</footer>
+
+
+</div>
+</body>
+</html>

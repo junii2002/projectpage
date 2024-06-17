@@ -5,208 +5,349 @@
 	<title>HTML + CSS 실습 5</title> 
 </head>
 <style>
-*{
-	box-sizing:border-box;
-}
-body{
-	margin:0;
-}
-.header{
-	background-color: #a8a8a8;
-	padding:20px;
-	text-align:center;
-	
-}
-.header h1{
-	font-size:50px;
-}
-.header h3{
-    font-size:80px;
-}
-.header p{
-	font-size:20px;
-}
-.topnav {
-            
-            background-color: #333;
-            text-align: center;
-        }
-.dropdown{
-	background-color:#333;
-	text-align:center;
-}
-.dropdown a{
-	display:inline-block;
-	color:#f2f2f2;
-	text-align:center;
-	padding:14px 16px;
-	text-decoration:none;
-}
-.dropdown a:hover{
-	background-color:#ddd;
-	color:black;
-}
-.column{
-	float:left;
-	padding:10px;
-}
-.column.side{
-	width:20%;
-}
-.column.middle{
-	width:60%;
-}
-.row::after{
-	content:"";
-	display:table;
-	clear:both;
-}
-@media screen and (max-width:600px){
-	.column.side,.column.middle,.topnav,.row{
-		width:100%;
+	* {
+		box-sizing: border-box;
 	}
+	body {
+		margin: 0;
+		font-family: Arial, sans-serif;
+		background-color: #f8f9fa;
+	}
+	.header {
+		background-color: #917b71;
+		padding: 55px;
+		text-align: center;
+	}
+	.header h1 {
+		font-family: inherit; 
+		font-weight: bold;
+		margin: 0; 
+		color:#dbdbdb;
+		font-size:50px;
+	}
+	.header p {
+		font-size: 20px;
+	}
+	.topnav {
+		background-color: #987058;
+		text-align: center;
+	}
+	.topnav a, .dropdown .dropbtn {
+		float: none;
+		display: inline-block;
+		color: #f2f2f2;
+		text-align: center;
+		padding: 14px 16px;
+		text-decoration: none;
+	}
+	.topnav a:hover, .dropdown:hover .dropbtn {
+		background-color: #896e5a;
+		color: black;
+	}
+	.dropdown {
+		display: inline-block;
+	}
+	.dropdown-content {
+		display: none;
+		position: absolute;
+		background-color: #f9f9f9;
+		min-width: 160px;
+		box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+		z-index: 1;
+	}
+	.dropdown-content a {
+		color: black;
+		padding: 12px 16px;
+		text-decoration: none;
+		display: block;
+		text-align: center;
+	}
+	.dropdown-content a:hover {
+		background-color: #ddd;
+	}
+	.dropdown:hover .dropdown-content {
+		display: block;
+	}
+	.row::after{
+	content: "";
+	display: table;
+	clear: both;
 }
-.footer{
-	background-color:#ddd;
-	padding:10px;
-	text-align:center;
-	
-}
-.uni{
-	border-radius:20px;
-	border:1px dashed #333;
-	text-align:center;
+	@media screen and (max-width: 600px) {
+		.topnav a, .dropdown .dropbtn {
+			float: none;
+			display: block;
+			text-align: left;
+		}
+		.column.side, .column.middle, .row {
+			width: 100%;
+		}
+	}
+	.footer {
+		background-color: #ddd;
+		padding: 10px;
+		text-align: center;
+	}
+	.column {
+			float: left;
+			padding: 10px;
+		}
+		.column.side {
+			width: 20%;
+		}
+		.column.middle {
+			width: 60%;
+		}
+	.uni, .offline, .shop {
+	border: 1px dashed #7e4728;
+	text-align: center;
 	margin: 10px 10px;
+	padding: 10px;
+	background-color:#a0755b;
+	color: rgb(205, 188, 188);
 }
-.uni h1{
-	font-size:20px;
-	font-weight:bold;
-	text-decoration:underline;
+.uni h1,.shop h1 {
+	font-size: 20px;
+	font-weight: bold;
+	text-decoration: underline;
+	color: #000;
 }
-.uni h2{
-	font-size:18px;
+.uni h2 {
+	font-size: 18px;
 	font-style: italic;
 }
-.uni p{
-	font-size:17px;
-	text-decoration:underline;
-	color:red;
+.uni p,.shop p {
+	font-size: 17px;
+	text-decoration: underline;
 }
-#uni{
-	display:grid;
-	background-color:rgb(230, 230, 230);
-	grid-template-rows:1fr 1fr;
-	border-radius:20px;
+.uni img, .offline img, .shop img {
+	width: 100%;
+	height: auto;
 }
-.shop{
-	border-radius:20px;
-	border:1px dashed #333;
-	text-align:center;
-	margin:10px 10px;
+
+	.uni {
+		border: 1px dashed #7e4728;
+		text-align: center;
+		margin: 10px 10px;
+	}
+	.uni h1 {
+		font-size: 20px;
+		font-weight: bold;
+		text-decoration: underline;
+	}
+	.uni h2 {
+		font-size: 18px;
+		font-style: italic;
+	}
+	.uni p {
+		font-size: 17px;
+		text-decoration: underline;
+		color: rgb(99, 59, 59);
+	}
+	#uni {
+		display: grid;
+		background-color:#a0755b;
+		grid-template-rows: 1fr 1fr;
+	}
+	.shop {
+		border: 1px dashed #7e4728;
+		text-align: center;
+		margin: 10px 10px;
+	}
+	.shop h1 {
+		font-size: 20px;
+		font-weight: bold;
+		text-decoration: underline;
+	}
+	.shop p {
+		color: red;
+		text-decoration: underline;
+	}
+	#shop {
+		display: grid;
+		background-color: #a0755b;
+	}
+	.card {
+		border: 1px dashed #7e4728;
+		padding: 15px;
+		margin: 5px;
+	}
+	.dropbtn {
+		background-color: #987058;
+		color: white;
+		padding: 16px;
+		font-size: 16px;
+		border: none;
+		cursor: pointer;
+		overflow: hidden;
+		text-align: center;
+		display: inline-block;
+		color: #e0dede;
+		text-align: center;
+		padding: 14px 16px;
+		text-decoration: none;
+	}
+	.dropdown {
+		position: relative;
+		display: inline-block;
+	}
+	.dropdown-content {
+		display: none;
+		position: absolute;
+		top: 100%;
+		left: 0;
+		background-color: #cecece;
+		min-width: 160px;
+		box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+		z-index: 1;
+	}
+	.dropdown-content a {
+		color: black;
+		padding: 12px 16px;
+		text-decoration: none;
+		display: block;
+	}
+	.dropdown:hover .dropdown-content {
+		display: block;
+	}
+	.dropdown-content a:hover {
+		background-color: #f1f1f1;
+	}
+	.dropdown:hover .dropbtn {
+		background-color: #a0755b;
+	}
+	.dropdown-submenu {
+	position: relative;
 }
-.shop h1{
-	font-size: 20px;
-	font-weight:bold;
-	text-decoration:underline;
+.dropdown-submenu .dropdown-content {
+	left: 100%;
+	top: 0;
+	display: none; /* Initially hidden */
 }
-.shop p{
-	color: red;
-	text-decoration:underline;
-}
-#shop{
-	display:grid;
-	background-color:rgb(230, 230, 230);
-	border-radius:20px;
-}
-.card{
-	border:1px dashed #333;
-	border-radius:10px;
-	padding:15px;
-	margin:5px;
+.dropdown-submenu:hover .dropdown-content {
+	display: block; /* Show on hover */
 }
 #login{
-	font-size:20px;
-	padding:30px;
-	border:1px dashed #333;
-	border-radius:10px;
-	text-align:left;
-	
+	font-size: 20px;
+	padding: 30px;
+	border: 1px dashed #7e4728;
+	text-align: left;
 }
-.dropbtn{
-	background-color:#333;
-	color:white;
-	padding:16px;
-	font-size:16px;
-	border:none;
-	cursor:pointer;
-	overflow:hidden;
-	text-align:center;
-	display:inline-block;
-	color:#e0dede;
-	text-align:center;
-	padding:14px 16px;
-	text-decoration:none;
-}
-.dropdown{
-	position:relative;
-	display:inline-block;
-}
-.dropdown-content{
-	display:none;
-	position:absolute;
-	top:100%;
-	left:0;
-	background-color:#cecece;
-	min-width:160px;
-	box-shadow:0px 8px 16px 0px rgba(0,0,0,0,2);
-	z-index:1;
-}
-.dropdown-content a{
-	color:black;
-	padding:12px 16px;
-	text-decoration:none;
-	display:block;
-}
-.dropdown:hover .dropdown-content{
-	display:block;
-}
-.dropdown-content a:hover{background-color:#f1f1f1}
-
-.dropdown:hover .dropbtn{
-	background-color:#525252;
-}
-.card h1{
-	font-weight:bold;
-	text-decoration:underline;
-	font-size: 25px;
-}
-.card h2{
-	font-style:italic;
-	font-size:20px;
-}
-.card p{
-	font-size:17px;
-}
-.card ol{
-	font-size:17px;
-	font-weight:bold;
-}
-.footer a{
-	text-decoration:none;
-	word-spacing:3rem;
-}
-.footer a:link{
-	color:black;
-	font-weight:bold;
-}
-.footer a:visited{
-	color:black;
-	font-weight:bold;
-}
-.footer a:hover{
-	color:purple;
-	font-weight:bold;
-}
+	.card h1 {
+		font-weight: bold;
+		text-decoration: underline;
+		font-size: 25px;
+	}
+	.card h2 {
+		font-style: italic;
+		font-size: 20px;
+	}
+	.card p {
+		font-size: 17px;
+	}
+	.card ol {
+		font-size: 17px;
+		font-weight: bold;
+	}
+	.footer a {
+		text-decoration: none;
+		word-spacing: 3rem;
+	}
+	.footer a:link {
+		color: black;
+		font-weight: bold;
+	}
+	.footer a:visited {
+		color: black;
+		font-weight: bold;
+	}
+	.footer a:hover {
+		color: purple;
+		font-weight: bold;
+	}
+	.fragrance-row {
+		display: flex;
+			justify-content: space-around;
+			text-align: center;
+			margin: 20px 0;
+		}
+		.fragrance-item {
+			width: 30%;
+			padding: 10px;
+		}
+		.fragrance-item figure {
+			margin: 0;
+			padding: 0;
+		}
+		.fragrance-item img {
+			width: 100%;
+			height: auto;
+		}
+		.fragrance-item p {
+			margin: 5px 0;
+			font-size: 16px;
+		}
+		.header h1 {
+			font-family: inherit; 
+			font-weight: bold;
+			margin: 0; 
+			color:#dbdbdb;
+		}
+		.login-container {
+			background-color: #fff;
+			border-radius: 10px;
+			box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+			padding: 30px;
+			width: 100%;
+		}
+		.login-container h2 {
+			text-align: center;
+			margin-bottom: 20px;
+			font-size: 24px;
+		}
+		.login-container .form-group {
+			margin-bottom: 15px;
+		}
+		.login-container .form-group input {
+			width: 100%;
+			height: 40px;
+			padding: 10px;
+			font-size: 14px;
+			border: 1px solid #ced4da;
+			border-radius: 5px;
+		}
+		.login-container .form-check {
+			display: flex;
+			align-items: center;
+		}
+		.login-container .form-check input {
+			margin-right: 10px;
+		}
+		.login-container .btn {
+			width: 100%;
+			height: 45px;
+			font-size: 16px;
+			background-color: #7e4728;
+			border: none;
+			color: #fff;
+			border-radius: 5px;
+			margin-top: 10px;
+		}
+		.login-container .btn:hover {
+			background-color: #7e4728;
+		}
+		.login-container .links {
+			text-align: center;
+			margin-top: 15px;
+		}
+		.login-container .links a {
+			color: #5f480e;
+			text-decoration: none;
+			font-size: 14px;
+		}
+		.login-container .links a:hover {
+			text-decoration: underline;
+		}
 </style>
 <body>
 	<div class="header">
@@ -217,31 +358,45 @@ body{
         <div class="dropdown">
             <button class="dropbtn">향수</button>
             <div class="dropdown-content">
-                <a href="#">플로럴</a>
-                <a href="#">우디</a>
+                <a href="floral.html">플로럴</a>
+                <a href="woody.html">우디</a>
             </div>
         </div>
 
         <div class="dropdown">
             <button class="dropbtn">히스토리</button>
             <div class="dropdown-content">
-                <a href="#">브랜드소개</a>
-                <a href="#">NOTE</a>
+                <a href="brand1.html">브랜드소개</a>
+                <a href="brand2.html">NOTE</a>
             </div>
         </div>
 
         <div class="dropdown">
             <button class="dropbtn">고객 지원</button>
             <div class="dropdown-content">
-                <a href="#">공지사항</a>
+                <a href="info.html">공지사항</a>
             </div>
         </div>
 
-        <div class="dropdown">
-            <button class="dropbtn">이벤트</button>
+		<div class="dropdown">
+			<button class="dropbtn">이벤트</button>
+			<div class="dropdown-content">
+				<div class="dropdown-submenu">
+					<a href="event1.html">이벤트</a>
+					<div class="dropdown-content">
+						<a href="#">시향지무료배송</a>
+						<a href="#">20%할인</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+
+		<div class="dropdown">
+            <button class="dropbtn">로그인</button>
             <div class="dropdown-content">
-                <a href="#">시향지무료배송</a>
-				<a href="#">20%할인</a>
+                <a href="login.html">로그인</a>
+				<a href="signup.html">회원가입</a>
             </div>
         </div>
     </div>	
@@ -254,22 +409,9 @@ body{
 					<input type="text" id="user" size="15"><br>
 					<label for="pass">비밀번호</label><br>
 					<input type="password" id="pass" size="15"><br>
-					<input type="submit" value="로그인" onclick="showAlert()">
+					<input type="submit" value="로그인" onclick="login()">
 					<input type="button" value="회원가입" onclick="redirectToSignup()">
 				</form>
-                
-                <script>
-                    function showAlert(){
-                        var user=document.getElementById('user').value;
-                
-                        alert(user+"님 환영합니다!");
-                    }
-
-                    function redirectToSignup(){
-                        window.location.href='signup.html';
-                    }
-                </script>
-                
 			</aside>
 		</div>
 	
@@ -281,34 +423,21 @@ body{
 						  <h1>회원가입</h1>
                         </header>
                         <ol>
-							<li label for="name">이름</li>
+							<li>이름</li>
                             <input type="text" id="name" size="15"><br>
-							<li label for="userId">아이디</li>
+							<li>생년월일</li>
+							<input type="date" id="birthday" name="birthday"><br/>
+							<li>아이디</li>
                             <input type="text" id="userId" size="15"><br>
-							<li label for="pw">비밀번호</li>
-                            <input type="text" id="pw" size="15"><br>
-                            <li label for="tel">전화번호</li>
+							<li>비밀번호</li>
+                            <input type="password" id="pw" size="15"><br>
+                            <li>전화번호</li>
                             <input type="text" id="tel" size="15"><br>
-                            <li label for="mail">이메일</li>
+                            <li>이메일</li>
                             <input type="text" id="mail" size="15"><br>
 						</ol>
-                        <input type="submit" value="확인" onclick="showAlert()">
+                        <input type="submit" value="확인" onclick="registerUser()">
 					    <input type="button" value="취소" onclick="rejectToSignup()">
-
-                        <script>
-                            function showAlert(){
-                                var userId=document.getElementById('userId').value;
-                            
-                                alert(userId+"님 환영합니다!");
-                            }
-            
-                            function rejectToSignup(){
-                                var cancel=confirm("정말 취소하시겠습니까?");
-                                if (cancel){
-                                    window.location.href="index.html";
-                                }
-                            }
-                        </script>
 				</article>
 			</section>
 		</div>
@@ -318,36 +447,91 @@ body{
 				<article id="uni">
 					<h1>Perfume</h1>
 					<h2>향수 구매하기</h2>
-					<p><img src="" width="170" height="150"></p>
+					<p><img src="floral1.png" width="170" height="200"></p>
 					<p>현재 이벤트 진행중 !<br>파격할인</p>
 				</article>
 			</div>
 			<div class="shop">
 				<article id="shop">
-					<h1>Hand Care</h1>
-					<p><img src="" width="200" weight="200"></p>
-					<p>핸드워시 신규런칭 !</p>
+					<h1>시향지이벤트</h1>
+					<p><img src="parfum.png" width="170" weight="100"></p>
+					<p>시향지 무료배송 이벤트 진행중 !</p>
 				</article>
 			</div>
 		</div>
 	</div>    
 	
-			
-	
 <div class="footer">
 	<footer>
 		<nav id="foot">
 			<ul>
-				<a href="#">장바구니</a>
-
-				<a href="#">1:1 문의</a>
-
-                <a href="#">오시는 길 </a>
+				<a href="shopping.html">장바구니</a>
+				<a href="qanda.html">&nbsp;1:1문의</a>
+                <a href="howtocome.html">&nbsp;오시는길 </a>
 			</ul>
 		</nav>	
 	</footer>
-
-
 </div>
+
+<script>
+	function setCookie(name, value, days) {
+		let expires = "";
+		if (days) {
+			let date = new Date();
+			date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+			expires = "; expires=" + date.toUTCString();
+		}
+		document.cookie = name + "=" + (value || "") + expires + "; path=/";
+	}
+
+	function getCookie(name) {
+		let nameEQ = name + "=";
+		let ca = document.cookie.split(';');
+		for (let i = 0; i < ca.length; i++) {
+			let c = ca[i];
+			while (c.charAt(0) === ' ') c = c.substring(1, c.length);
+			if (c.indexOf(nameEQ) === 0) return c.substring(nameEQ.length, c.length);
+		}
+		return null;
+	}
+
+	function login() {
+		var user = document.getElementById('user').value;
+		var pass = document.getElementById('pass').value;
+		var storedPass = localStorage.getItem(user);
+
+		if (storedPass === pass) {
+			setCookie("member", user, 7);
+			alert(user + "님 환영합니다!");
+		} else {
+			alert("회원가입이 필요합니다.");
+			window.location.href = 'signup.html';
+		}
+	}
+
+	function redirectToSignup(){
+		window.location.href='signup.html';
+	}
+
+	function registerUser() {
+		var userId = document.getElementById('userId').value;
+		var pw = document.getElementById('pw').value;
+
+		if (userId && pw) {
+			localStorage.setItem(userId, pw);
+			alert('회원가입이 완료되었습니다!');
+			window.location.href = 'login.html'; // 로그인 페이지로 이동
+		} else {
+			alert('아이디와 비밀번호를 입력해주세요.');
+		}
+	}
+
+	function rejectToSignup(){
+		var cancel = confirm("정말 취소하시겠습니까?");
+		if (cancel){
+			window.location.href="main.html";
+		}
+	}
+</script>
 </body>
 </html>

@@ -70,6 +70,11 @@ body {
 		.column.middle {
 			width: 60%;
 		}
+        .column.middle a{
+            color:rgb(130, 81, 54);
+            font-size:20px;
+            font-weight:bold;
+        }
 		.row::after {
 			content: "";
 			display: table;
@@ -350,46 +355,31 @@ body {
 		</div>
 	
 		<div class="column middle">
-			<section id="post">
-				<article>
-					<div class="card">
-						<header>
-							<h1>Floral</h1>
-						</header>
-						<div class="fragrance-row">
-							<div class="fragrance-item">
-								<figure>
-									<img src="floral1.png" width="150" height="150" alt="향수 이미지1">
-								</figure>
-								<h2>세인트모리츠</h2>
-								<h4>가격 : 58000원<br><br></h4>
-								<p>향긋한 플로럴 노트와 부드럽고 포근한 머스크와 바닐라 향이 추운 겨울 창문으로 드리우는 따스한 햇살처럼 포근한 향기</p>
-								
-							</div>
-							<div class="fragrance-item">
-								<figure>
-									<img src="floral2.png" width="150" height="150" alt="향수 이미지2">
-								</figure>
-								<h2>플로랄리아</h2>
-								<h4>가격 : 58000원<br><br></h4>
-								<p>싱그럽고 스파클링한 살구꽃 향을 시작으로 풍성한 꽃 향을 선사하며, 시간이 지날수록 산뜻한 머스크가 부드럽게 감싸주는 대중적이고 호불호 없는 향</p>
-								
-							</div>
-							<div class="fragrance-item">
-								<figure>
-									<img src="floral3.png" width="150" height="150" alt="향수 이미지3">
-								</figure>
-								<h2>베리 섹시</h2>
-								<h4>가격 : 58000원<br><br></h4>
-								<p>은은한 로즈향과 부드러운 크림 위에 상큼한 사과와 딸기향으로 섹시하면서 귀엽고 사랑스러움이 넘치는 향기</p>
-							</div>
-						</div>
-					</div>
-				</article>
-			</section>
+            <h1>오시는 길</h1>
+            <hr>
+            <div id="msg">이곳에 위치 정보출력</div>
+            <iframe id="map" width="425" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe><br/>
+
+            <a id="bigmaplink" target="_blank"><br><br>더 자세히 보기</a>
 		</div>
 		
-	
+        <script>
+            function setFixedLocation() {
+                let lat = 37.513276;
+                let lon = 127.102546;
+                let text = "<br>Fragrance 롯데월드몰점<br><br>";
+                document.getElementById("msg").innerHTML = text;
+    
+                let map = document.getElementById("map");
+                map.src = "https://www.openstreetmap.org/export/embed.html?bbox=" + (lon - 0.01) + "%2C" + (lat - 0.01) + "%2C" + (lon + 0.01) + "%2C" + (lat + 0.01);
+    
+                let maplink = document.getElementById("bigmaplink");
+                let zoom = 15;
+                maplink.href = "https://www.openstreetmap.org/#map=" + zoom + "/" + lat + "/" + lon;
+            }
+    
+            window.onload = setFixedLocation;
+        </script>
 		<div class="column side">
 			<div class="uni">
 				<article id="uni">
